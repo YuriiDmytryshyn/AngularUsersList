@@ -1,0 +1,144 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: azure;
+}
+
+.container {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.log {
+  width: 400px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+}
+
+.tableUser {
+  min-width: 400px;
+  min-height: 400px;
+}
+
+#login,
+#password,
+#email {
+  font-size: 16px;
+  margin-left: 10px;
+  height: 30px;
+  outline: none;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+}
+
+#login:focus,
+#password:focus,
+#email:focus{
+  box-shadow: 0px 0px 2px 2px lightblue;
+  border: 1px solid lightblue;
+}
+
+label {
+  margin: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.addUser {
+  margin-top: 10px;
+  margin-left: 10px;
+  width: 390px;
+  height: 30px;
+  background-color: green;
+  border: 2px solid green;
+  border-radius: 5px;
+  color: white;
+  outline: none;
+}
+
+.addUser:active{
+  border: none;
+  outline: none;
+  box-shadow: 0 0 3px 3px green;
+}
+
+.editUser {
+  margin-top: 10px;
+  margin-left: 10px;
+  width: 390px;
+  height: 30px;
+  background-color: aqua;
+  border: 2px solid aqua;
+  border-radius: 5px;
+  color: white;
+  outline: none;
+}
+
+.editUser:active {
+  border: none;
+  outline: none;
+  box-shadow: 0 0 3px 3px aqua;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: center;
+}
+
+table {
+  margin-top: 30px;
+  border-top: 2px solid rgba(0, 0, 0, 0.2);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+}
+
+.tableId {
+  width: 30px;
+}
+
+.tableLogin,
+.tableEdit,
+.tableDelete,
+.tablePassword {
+  width: 80px;
+}
+
+.tableEmail {
+  width: 100px;
+}
+
+.edit {
+  background-color: orange;
+  width: 40px;
+  height: 25px;
+  border: 1px solid orange;
+  border-radius: 4px;
+  outline: none;
+}
+
+.edit:hover {
+  background-color: rgb(187, 122, 0);
+  outline: none;
+}
+
+.delete {
+  width: 70px;
+  height: 25px;
+  background-color: orangered;
+  color: white;
+  border: 1px solid orangered;
+  border-radius: 4px;
+  outline: none;
+}
+
+.delete:hover {
+  background-color: rgb(187, 50, 0);
+  outline: none;
+}

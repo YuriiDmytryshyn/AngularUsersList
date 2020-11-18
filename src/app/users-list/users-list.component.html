@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="log">
+        <label for="login">Login</label>
+        <input id="login" type="text" [placeholder]="inputLoginPlaceholder" [autocomplete]="inputAutocomplete" [(ngModel)]="newUserLogin" name="newUserLogin">
+        <label for="password">Password</label>
+        <input id="password" type="text" [placeholder]="inputPasswordPlaceholder" [autocomplete]="inputAutocomplete" [(ngModel)]="newUserPassword" name="newUserPassword">
+        <label for="email">Email address</label>
+        <input id="email" type="text" [placeholder]="inputEmailPlaceholder" [autocomplete]="inputAutocomplete" [(ngModel)]="newUserEmail" name="newUserEmail">
+        <div>
+        <button *ngIf="isCheck" class="addUser" (click)="addUser()">Add user</button>
+        <button *ngIf="!isCheck" class="editUser" (click)="editUser()">Save edit user</button>
+        </div>
+    </div>
+    <div class="tableUser">
+        <table class="table">
+                <tr>
+                    <th class="tableId">#</th>
+                    <th class="tableLogin">Login</th>
+                    <th class="tablePassword">Password</th>
+                    <th class="tableEmail">Email</th>
+                    <th class="tableEdit">Edit</th>
+                    <th class="tableDelete">Delete</th>
+                </tr>
+                <tr *ngFor="let user of users; index as i">
+                    <th>{{ i+1 }}</th>
+                    <th>{{ user.login }}</th>
+                    <th>{{ user.password }}</th>
+                    <th>{{ user.email }}</th>
+                    <th><button class="edit" [style.background]="editColor" (click)="edit(i)">edit</button></th>
+                    <th><button class="delete" [style.background]="deleteColor" (click)="deleteUser(i)">delete</button></th>
+                </tr>
+        </table>
+    </div>
+</div>
